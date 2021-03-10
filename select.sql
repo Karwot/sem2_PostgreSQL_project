@@ -1,6 +1,18 @@
 --Srednia cena samochodow wedlug marki
 SELECT marka, avg(cena_ogloszona) from samochod group by marka;
 
+--wypisanie samochodow które mają więcej niż jedną rezerwację(relacja n-m)
+select id_samochod, count (id_samochod) as ilosc_rezerwacji from rezerwacja group by id_samochod;
+
+--wypisanie informacji o samochodzie i czasie trwania dla rezerwacji które już się zakończyły 
+select r.id as id_rezerwacji, s.marka, s.model, (r.koniec_rezerwacji-r.poczatek_rezerwacji) as czas_trwania_rezerwacji from rezerwacja as r inner join  samochod as s on r.id_samochod=s.id where r.koniec_rezerwacji IS NOT NULL;
+
+-- klienci ktorych nazwisko zaczyna się od litery P
+select * from klient where nazwisko like 'P%';
+
+--wszystkie samochody wystawione przez sprzedającego o id=3 (relacja 1 do wielu)
+select * from samochod where id_sprzedajacy=3;
+
 --Wypisanie klientów, którzy nie dokonali rezerwacji
 SELECT * from klient where id NOT IN (SELECT id_klient from rezerwacja);
 
@@ -32,3 +44,8 @@ DELETE  FROM samochod where id in(select id_samochod from transakcja where data_
 
 --Samochody marki 'BMW', których cena jest wyższa niż średnia cena samochodu w komisie
 SELECT * FROM samochod WHERE marka='BMW' and cena_ogloszona>(select avg(cena_ogloszona) from samochod);
+
+--czas trwania rezerwacji dla poszczegolnych samochodow. Tylko zakonczone rezerwacje
+select r.id as id_rezerwacji, s.marka, s.model, (r.koniec_rezerwacji-r.poczatek_rezerwacji) as czas_trwania_rezerwacji from rezerwacja as r inner join  samochod as s on r.id_samochod=s.id where r.koniec_rezerwacji IS NOT NULL;
+
+

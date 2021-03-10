@@ -34,16 +34,23 @@ INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzeda
 INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'Fiat', 'Grande Punto', 328564, 12500,  1);
 INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'BMW', 'Seria 5', 28564, 132500,  4);
 INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'BMW', 'Seria 7', 156564, 89500,  3);
+INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'Skoda', 'Octavia', 256564, 13500,  3);
+INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'Fiat', 'Grande Punto', 116462, 9500,  1);
+INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'Volkswagen', 'Golf 6', 276564, 29500,  2);
+INSERT INTO samochod(id, marka, model, stan_licznika, cena_ogloszona, id_sprzedajacy) values(DEFAULT, 'Opel', 'Astra', 256334, 19500,  3);
+
 
 
 
 INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '20-03-2020', '27-06-2020', 41000, 2, 4, 2);
+INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '22-03-2020', '29-06-2020', 41000, 2, 3, 2);
 INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '12-02-2020', '12-07-2020', 58000, 5, 2, 3);
+INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '12-02-2020', '12-07-2020', 58000, 5, 8, 3);
 INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '20-05-2020', '27-06-2020', NULL, 4, 3, 2);
 INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '11-03-2020', '01-06-2020', 12100, 6, 1, 3);
-INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '11-03-2020', '01-06-2020', 31000, 8, 5, 1);
+INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '11-03-2020', '01-06-2020', 11650, 8, 5, 1);
 INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '11-04-2020', '01-05-2020', 31000, 2, 6, 1);
-
+INSERT INTO rezerwacja(id, poczatek_rezerwacji, koniec_rezerwacji, cena_w_rezerwacji, id_samochod, id_klient, id_pracownik) values(DEFAULT, '09-04-2020', '01-05-2020', 31000, 2, 7, 2);
 
 
 INSERT INTO transakcja(id, cena_ostateczna, data_planowana, data_ostateczna, id_samochod, id_klient, id_pracownik) values(DEFAULT, NULL, '30-06-2020', NULL, 2, 4, 3);
